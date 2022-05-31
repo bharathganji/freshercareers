@@ -1,0 +1,17 @@
+<br />
+<h1><b>Browse Latest posted jobs</b></h1>
+
+<div ngClass="job-collection">
+  <div
+    *ngFor="
+      let item of jobcollection | paginate: { itemsPerPage: 6, currentPage: p }
+    "
+  >
+    <app-cardview [jobcollection]="item" (click)="gotoPost('/post/',item.applylink)"></app-cardview>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<pagination-controls
+  (pageChange)="p = $event"
+  ngClass="pagination-controls"
+></pagination-controls>
