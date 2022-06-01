@@ -11,5 +11,8 @@ export class CardviewComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { 
+    console.log('cardview called');
+    
+  }
 }

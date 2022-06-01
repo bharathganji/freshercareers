@@ -1,11 +1,125 @@
-<p>postview works!</p>
-<p>{{ id }}</p>
+<!-- <div
+  ngClass=""
+  style="background-color: red; padding: 100px; margin: 20px"
+></div> -->
+<!--<div style="display: flex; flex-direction: row; flex-wrap: wrap">
+  <div
+    ngClass="d-none d-sm-block"
+    style="background-color: blue; padding: 20px; margin: 20px; float: left"
+  ></div>
+  <div>
+    <h1>
+      {{ post.id }}
+      {{ post.title }}
+      {{ post.position }}
+      {{ post.location }}
+    </h1>
+  </div>
+  <div
+    ngClass="d-block d-sm-none"
+    style="
+      background-color: red;
+      width: 100%;
+      border: 3px solid #008000;
+      padding: 10px;
+      margin: 10px;
+    "
+  ></div>
+  <div style="flex-shrink: 2">
+    <h1>
+      {{ post.type }}
+      {{ post.experience }}
+      {{ post.qualification }}
+      {{ post.batch }}
+      {{ post.salary }}
+      {{ post.link }}
+    </h1>
+  </div>
+  <div
+    ngClass="d-none d-sm-block"
+    style="background-color: red; padding: 20px; margin: 10px; float: right"
+  ></div>
+</div>
+<div
+  ngClass=""
+  style="
+    background-color: red;
+    padding: 100px;
+    margin: 10px;
+    bottom: 0;
+    position: relative;
+  "
+></div> -->
+<div *ngIf="isLoading; else postview" style="height: 100%">
+  <app-loading></app-loading>
+</div>
+<ng-template #postview>
+  <div ngClass="container ">
+    <section>
+      <div ngClass="section-title">
+        <h2 ngClass="section-title-name">{{ post.title }}</h2>
+        <h3 ngClass="section-title-postdate">06-01-2022</h3>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <article>
+        <h2>Role & Responsibilities</h2>
+        <ul>
+          <li>..........</li>
+          <li>..........</li>
+          <li>..........</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Required Candidate profile</h2>
+        <ul>
+          <li>..........</li>
+          <li>..........</li>
+          <li>..........</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Job Summary</h2>
+        <h3>Job type: &nbsp; {{ post.type }}</h3>
+        <h3>Job Role: &nbsp; {{ post.position }}</h3>
+        <h3>Job qualification: &nbsp; {{ post.qualification }}</h3>
+        <h3>Job location: &nbsp; {{ post.location }}</h3>
+        <h3>Batch: &nbsp; {{ post.batch }}</h3>
+        <h3>experience: &nbsp; {{ post.experience }}</h3>
+        <h3>salary: &nbsp; {{ post.salary }}</h3>
 
-<h1>
-  {{ post.title }}
-  {{ post.salary }}
-  {{ post.description }}
-  {{ post.postdate }}
-  {{ post.companylogo }}
-  {{ post.applylink }}
-</h1>
+        <br />
+        <h2>About company</h2>
+        <mat-divider></mat-divider>
+        <article>
+          <h3>
+            comapny s a dynamic digital marketing agency that provides
+            customized services to grow clients business. We provide world-class
+            marketing strategy and execution.
+          </h3>
+        </article>
+        <mat-divider></mat-divider>
+        <br>
+        <button (click)="applynow(post.link)" ngClass="apply-button">
+          <span class="label">Apply Now</span>
+          <span class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                fill="currentColor"
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+              ></path>
+            </svg>
+          </span>
+        </button>
+      </article>
+    </section>
+  </div>
+</ng-template>
+<br>

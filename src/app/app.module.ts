@@ -15,6 +15,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PostviewComponent } from './client/modules/components/postview/postview.component';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './client/modules/components/home-page/home-page.component';
+import { LoadingComponent } from './client/modules/components/loading/loading.component';
+import { FooterComponent } from './client/modules/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { HomePageComponent } from './client/modules/components/home-page/home-pa
     CardviewComponent,
     PostviewComponent,
     HomePageComponent,
+    LoadingComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
