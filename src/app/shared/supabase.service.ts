@@ -18,7 +18,7 @@ export class SupabaseService {
     console.log('called fetch dummy');
 
     let { data, error } = await this.supabase.from('jobData').select('*');
-    console.log(data);
+
     this.data = data!;
     return data;
   };
@@ -35,4 +35,33 @@ export class SupabaseService {
   getdata() {
     return this.data;
   }
+  searchPostsArray!: jobData[];
+  searchFilter = (QueryParams: string[]) => {
+    // let obj = this.getdata();
+    this.fetchDummy().then((response: any) =>
+      response.forEach((element: any) => {
+        console.log(Object.values(element));
+      })
+    );
+    // Object.values(obj).forEach((ele) => this.contains(ele, QueryParams));
+    // return this.searchPostsArray;
+  };
+  contains = (str: any, QueryParams: string[]) => {
+    QueryParams.some((element: any) => {
+      if (str.includes(element)) {
+        this.searchPostsArray.push(element);
+      } else console.log('no');
+    });
+  };
+
+  // searchFilter = async (param: any) => {
+  //   let { data, error } = await this.supabase
+  //     .from('jobData')
+  //     .select('*')
+  //     .textSearch('title',param)
+  //   console.log(data);
+  //   // this.data = data!;
+  //   // return data;
+  // };
 }
+

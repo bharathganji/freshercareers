@@ -5,6 +5,11 @@
   align-items: center;
   gap: 1rem;
   justify-content: center;
+  flex-direction: column;flex-wrap: wrap;
+}
+.mat-card-form{
+  /* flex-grow: 2; */
+  width: 80%;
 }
 
 /* From uiverse.io by @satyamchaudharydev */
@@ -18,9 +23,10 @@
 }
 /* styling of whole input container */
 .form {
+  /* width: -webkit-fill-available; */
     flex-grow: 0.5;
   --timing: 0.3s;
-  --width-of-input: 200px;
+  /* --width-of-input: 200px; */
   --height-of-input: 40px;
   --border-height: 2px;
   --input-bg: #fff;

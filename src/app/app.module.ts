@@ -17,6 +17,15 @@ import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './client/modules/components/home-page/home-page.component';
 import { LoadingComponent } from './client/modules/components/loading/loading.component';
 import { FooterComponent } from './client/modules/components/footer/footer.component';
+import { PrivacyPolicyComponent } from './client/modules/components/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './client/modules/components/terms-and-conditions/terms-and-conditions.component';
+import { DisclaimerComponent } from './client/modules/components/disclaimer/disclaimer.component';
+import { AboutUsComponent } from './client/modules/components/about-us/about-us.component';
+import { ContactComponent } from './client/modules/components/contact/contact.component';
+import { AdvertiseWithUsComponent } from './client/modules/components/advertise-with-us/advertise-with-us.component';
+import { SearchPostsComponent } from './client/modules/components/search-posts/search-posts.component';
+import { NotFoundComponent } from './client/modules/components/not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +39,14 @@ import { FooterComponent } from './client/modules/components/footer/footer.compo
     HomePageComponent,
     LoadingComponent,
     FooterComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent,
+    DisclaimerComponent,
+    AboutUsComponent,
+    ContactComponent,
+    AdvertiseWithUsComponent,
+    SearchPostsComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -38,6 +55,8 @@ import { FooterComponent } from './client/modules/components/footer/footer.compo
     BrowserAnimationsModule,
     MaterialExampleModule,
     NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
