@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build-dev": "ng build",
+    "start": "npm run serve:ssr",
+    "build": "npm run build:ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run test:serve-ssr",
-    "serve:ssr": "node dist/test/server/main.js",
-    "build:ssr": "ng build && ng run test:server",
-    "prerender": "ng run test:prerender",
-    "vercel-build": "npm run build:ssr"
+    "dev:ssr": "ng run FresherCareers:serve-ssr",
+    "serve:ssr": "node dist/FresherCareers/server/main.js",
+    "build:ssr": "ng build --prod && ng run FresherCareers:server:production",
+    "prerender": "ng run FresherCareers:prerender"
   },
   "private": true,
   "dependencies": {
