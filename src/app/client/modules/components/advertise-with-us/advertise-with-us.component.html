@@ -1,10 +1,10 @@
 <div class="container px-4 mt-4">
   <div class="row gx-4 justify-content-center">
     <div class="col-lg-10">
-      <h2>formpost.app demo</h2>
+      <h2>freshercareers.in</h2>
       <p class="lead">
-        Use this interactive demo to test out formpost email forwarder. Simply
-        change email@website.com to your own email and submit the form.
+        Fill the details and submit the form. we'll get back to u as soon as
+        possible
       </p>
       <br />
       <div>
@@ -23,16 +23,18 @@
           <input
             type="hidden"
             name="fp_reply_message"
-            value="Thank you for contacting us!"
+            value="Thank you for contacting us! we have received your mail"
           />
           <input type="hidden" name="fp_reply_from" value="freshercareers.in" />
           <div class="form-group row">
-            <label for="fullname" class="col-4 col-form-label">Fullname</label>
+            <label for="fullname" class="col-4 col-form-label"
+              >*Full Name</label
+            >
             <div class="col-8">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
-                    <i class="fa fa-address-card"></i>
+                    <em class="fa fa-address-card"></em>
                   </div>
                 </div>
                 <input
@@ -40,14 +42,21 @@
                   name="fullname"
                   type="text"
                   class="form-control"
+                  required
                 />
               </div>
             </div>
           </div>
           <div class="form-group row">
-            <label for="email" class="col-4 col-form-label">Email</label>
+            <label for="email" class="col-4 col-form-label">*Email</label>
             <div class="col-8">
-              <input id="email" name="email" type="text" class="form-control" />
+              <input
+                id="email"
+                name="email"
+                type="text"
+                class="form-control"
+                required
+              />
             </div>
           </div>
           <div class="form-group row">

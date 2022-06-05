@@ -27,6 +27,7 @@ import { SearchPostsComponent } from './client/modules/components/search-posts/s
 import { NotFoundComponent } from './client/modules/components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessPageComponent } from './client/modules/components/success-page/success-page.component';
+import { PostAJobComponent } from './client/modules/components/post-a-job/post-a-job.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,8 @@ import { SuccessPageComponent } from './client/modules/components/success-page/s
     SearchPostsComponent,
     NotFoundComponent,
     SuccessPageComponent,
+    PostAJobComponent,
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

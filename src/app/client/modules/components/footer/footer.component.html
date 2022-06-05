@@ -14,8 +14,8 @@
     <p class="footer-links">
       <a routerLink="/about">About us</a>
       ·
-      <!-- <a routerLink="/advertise">Advertise With Us</a>
-      ·  -->
+      <a routerLink="/advertise">Advertise With Us</a>
+      ·
       <a routerLink="/privacy-policy">Privacy policy</a>
       ·
       <a routerLink="/disclaimer">Disclaimer</a>
@@ -29,6 +29,7 @@
       <a href="https://www.facebook.com/freshejobs/" target="_blank"
         ><img
           src="https://img.icons8.com/fluency/48/undefined/facebook-new.png"
+          alt="facebook"
         />
       </a>
       <a
@@ -36,9 +37,11 @@
         target="_blank"
         ><img
           src="https://img.icons8.com/fluency/48/undefined/instagram-new.png"
+          alt="instagram"
       /></a>
       <a href="https://t.me/freshercareersdotin" target="_blank"
         ><img
+          alt="telegram"
           src="https://img.icons8.com/fluency/48/undefined/telegram-app.png"
       /></a>
     </div>
@@ -47,10 +50,28 @@
   <div class="footer-right">
     <p>Contact Us</p>
 
-    <form action="#" method="post">
-      <input type="text" name="email" placeholder="Email" />
+    <form
+      method="POST"
+      ngNoForm
+      action="https://formpost.app/bharathganji1@gmail.com"
+    >
+      <input
+        type="hidden"
+        name="fp_redirect"
+        value="https://freshercarees.herokuapp.com/success"
+      />
+      <input type="hidden" name="fp_subject" value="Req: For contact" />
+      <input type="hidden" name="fp_reply" value="true" />
+      <input
+        type="hidden"
+        name="fp_reply_message"
+        value="Thank you for contacting us! we have received your mail"
+      />
+      <input type="hidden" name="fp_reply_from" value="freshercareers.in" />
+
+      <input type="text" name="email" placeholder="Email" required />
       <textarea name="message" placeholder="Message"></textarea>
-      <button>Send</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 </footer>

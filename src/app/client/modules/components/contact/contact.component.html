@@ -1,44 +1,118 @@
 <div ngClass="container justify">
-    <h1>Contact Us !</h1>
-<h2 style="text-align: center">
-  Welcome to <span id="W_Name"> freshercareers.in</span>!
-</h2>
+  <h1>Contact Us !</h1>
+  <h2 style="text-align: center">
+    Welcome to <span id="W_Name"> freshercareers.in</span>!
+  </h2>
 
-<p style="font-size: 17px">
-  Please email us if you have any queries about the site, advertising, or
-  anything else.
-</p>
+  <div style="text-align: center">
+    <p style="font-size: 17px">
+      Please email us if you have any queries about the site, advertising, or
+      anything else.
+    </p>
+    <div>
+      <div class="container px-4 mt-4">
+        <div class="row gx-4 justify-content-center">
+          <div class="col-lg-10">
+            <p class="lead">
+              Fill the details and submit the form. we'll get back to u as soon
+              as possible
+            </p>
+            <br />
+            <div>
+              <form
+                method="POST"
+                ngNoForm
+                action="https://formpost.app/bharathganji1@gmail.com"
+              >
+                <input
+                  type="hidden"
+                  name="fp_redirect"
+                  value="https://freshercarees.herokuapp.com/success"
+                />
+                <input
+                  type="hidden"
+                  name="fp_subject"
+                  value="Req: For Advertise"
+                />
+                <input type="hidden" name="fp_reply" value="true" />
+                <input
+                  type="hidden"
+                  name="fp_reply_message"
+                  value="Thank you for contacting us! we have received your mail"
+                />
+                <input
+                  type="hidden"
+                  name="fp_reply_from"
+                  value="freshercareers.in"
+                />
+                <div class="form-group row">
+                  <label for="email" class="col-4 col-form-label">*Email</label>
+                  <div class="col-8">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="message" class="col-4 col-form-label"
+                    >Mesage</label
+                  >
+                  <div class="col-8">
+                    <textarea
+                      id="message"
+                      name="message"
+                      cols="40"
+                      rows="5"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-group row" style="margin-right: 25%;">
+                  <div class="offset-4 col-8" >
+                    <button name="submit" type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div><strong>or directly mail us</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      alt="contact-us"
+      height="87"
+      src="https://lh3.googleusercontent.com/-BA7qy8h_v1g/YLVCWDNZdCI/AAAAAAAAALw/rsHNJWX0BK4P5CuB0ymG8QkJ9A9E8KchgCLcBGAsYHQ/w320-h87/email-us-1805514__480.webp"
+      width="320"
+    />
 
-<div style="text-align: center">
-  <img
-    alt="contact-us"
-    height="87"
-    src="https://lh3.googleusercontent.com/-BA7qy8h_v1g/YLVCWDNZdCI/AAAAAAAAALw/rsHNJWX0BK4P5CuB0ymG8QkJ9A9E8KchgCLcBGAsYHQ/w320-h87/email-us-1805514__480.webp"
-    width="320"
-  />
+    <p>
+      <em
+        class="fas fa-envelope-open-text"
+        style="color: #2c3e50; font-size: 20px"
+      ></em>
+      <strong
+        ><em>
+          <span id="W_Email"
+            ><a href="mailto:freshercareersdotin@gmail.com">
+              freshercareersdotin@gmail.com</a
+            ></span
+          ></em
+        ></strong
+      ><br />
+    </p>
 
-  <p >
-    <i
-      class="fas fa-envelope-open-text"
-      style="color: #2c3e50; font-size: 20px"
-    ></i>
-    <b
-      ><i>
-        <span id="W_Email"
-          ><a href="mailto:freshercareersdotin@gmail.com">
-            freshercareersdotin@gmail.com</a
-          ></span
-        ></i
-      ></b
-    ><br />
-
-   
-
-  <h3 style="text-align: center; color: #3e005d">
-    We will revert you as soon as possible...!
-  </h3>
-  <p style="text-align: center; color: #3e005d">
-    Thank you for contacting us! <br /><b>Have a great day</b>
-  </p>
-</div>
+    <h3 style="text-align: center; color: #3e005d">
+      We will revert you as soon as possible...!
+    </h3>
+    <p style="text-align: center; color: #3e005d">
+      Thank you for contacting us! <br /><strong>Have a great day</strong>
+    </p>
+  </div>
 </div>

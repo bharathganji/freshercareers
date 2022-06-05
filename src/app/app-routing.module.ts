@@ -6,6 +6,7 @@ import { ContactComponent } from './client/modules/components/contact/contact.co
 import { DisclaimerComponent } from './client/modules/components/disclaimer/disclaimer.component';
 import { HomePageComponent } from './client/modules/components/home-page/home-page.component';
 import { NotFoundComponent } from './client/modules/components/not-found/not-found.component';
+import { PostAJobComponent } from './client/modules/components/post-a-job/post-a-job.component';
 import { PostviewComponent } from './client/modules/components/postview/postview.component';
 import { PrivacyPolicyComponent } from './client/modules/components/privacy-policy/privacy-policy.component';
 import { SearchPostsComponent } from './client/modules/components/search-posts/search-posts.component';
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'advertise', component: AdvertiseWithUsComponent },
   { path: 'search', component: SearchPostsComponent },
   { path: 'success', component: SuccessPageComponent },
+  { path: 'postjob', component:PostAJobComponent },
+
   { path: '', component: HomePageComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' },
