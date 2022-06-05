@@ -26,6 +26,7 @@ import { AdvertiseWithUsComponent } from './client/modules/components/advertise-
 import { SearchPostsComponent } from './client/modules/components/search-posts/search-posts.component';
 import { NotFoundComponent } from './client/modules/components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SuccessPageComponent } from './client/modules/components/success-page/success-page.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdvertiseWithUsComponent,
     SearchPostsComponent,
     NotFoundComponent,
+    SuccessPageComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

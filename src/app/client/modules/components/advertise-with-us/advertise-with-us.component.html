@@ -1,1 +1,71 @@
-<p>advertise-with-us works!</p>
+<div class="container px-4 mt-4">
+  <div class="row gx-4 justify-content-center">
+    <div class="col-lg-10">
+      <h2>formpost.app demo</h2>
+      <p class="lead">
+        Use this interactive demo to test out formpost email forwarder. Simply
+        change email@website.com to your own email and submit the form.
+      </p>
+      <br />
+      <div>
+        <form
+          method="POST"
+          action="https://formpost.app/bharathganji1@gmail.com"
+        >
+          <input
+            type="hidden"
+            name="fp_redirect"
+            value="https://freshercarees.herokuapp.com/success"
+          />
+          <input type="hidden" name="fp_subject" value="Req: For Advertise" />
+          <input type="hidden" name="fp_reply" value="true" >
+          <input type="hidden" name="fp_reply_message" value="Thank you for contacting us!" >
+          <input type="hidden" name="fp_reply_from" value="freshercareers.in" >
+          <div class="form-group row">
+            <label for="fullname" class="col-4 col-form-label">Fullname</label>
+            <div class="col-8">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-address-card"></i>
+                  </div>
+                </div>
+                <input
+                  id="fullname"
+                  name="fullname"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-4 col-form-label">Email</label>
+            <div class="col-8">
+              <input id="email" name="email" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="message" class="col-4 col-form-label">Mesage</label>
+            <div class="col-8">
+              <textarea
+                id="message"
+                name="message"
+                cols="40"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-4 col-8">
+              <button name="submit" type="submit" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

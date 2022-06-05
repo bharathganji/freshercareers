@@ -9,6 +9,7 @@ import { NotFoundComponent } from './client/modules/components/not-found/not-fou
 import { PostviewComponent } from './client/modules/components/postview/postview.component';
 import { PrivacyPolicyComponent } from './client/modules/components/privacy-policy/privacy-policy.component';
 import { SearchPostsComponent } from './client/modules/components/search-posts/search-posts.component';
+import { SuccessPageComponent } from './client/modules/components/success-page/success-page.component';
 
 const routes: Routes = [
   { path: 'post/:id', component: PostviewComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'advertise', component: AdvertiseWithUsComponent },
   { path: 'search', component: SearchPostsComponent },
+  { path: 'success', component: SuccessPageComponent },
   { path: '', component: HomePageComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' },
