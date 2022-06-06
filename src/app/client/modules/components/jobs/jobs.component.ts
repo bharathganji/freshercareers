@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { jobData } from 'src/app/classes/jobData';
 import { SupabaseService } from 'src/app/shared/supabase.service';
@@ -17,17 +16,18 @@ export class JobsComponent implements OnInit {
   jobcollection!: jobData[] | any;
   isLoading = true;
   ngOnInit(): void {
-    this.supabaseservice.fetchDummy().then((resolve) => {
-      this.jobcollection = resolve;
-      this.isLoading = false;
-      console.log('job component called', this.jobcollection);
-    });
+    this.supabaseservice
+      .fetchDummy()
+      .then((resolve) => {
+        this.jobcollection = resolve;
+        this.isLoading = false;
+      })
+      .catch((e) => alert(e));
   }
 
   p: number = 1;
 
-  public gotoPost(url: any, id: any) {
-    var myurl = `${url}/${id}`;
+  public gotoPost(url: any, id: any): void {
     this.router.navigate([url, id]);
   }
 }

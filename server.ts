@@ -30,6 +30,7 @@ export function app(): express.Express {
   }));
 
   // All regular routes use the Universal engine
+  // file deepcode ignore NoRateLimitingForExpensiveWebOperation: <please specify a reason of ignoring this>
   server.get('*', (req, res) => {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });

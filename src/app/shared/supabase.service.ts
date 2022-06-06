@@ -27,7 +27,6 @@ export class SupabaseService {
       .from('jobData')
       .select('*')
       .eq('id', param);
-    // console.log(data);
     this.data = data!;
     return data;
   };
@@ -37,12 +36,13 @@ export class SupabaseService {
   }
   searchPostsArray!: jobData[];
   searchFilter = (QueryParams: string[]) => {
-    // let obj = this.getdata();
-    this.fetchDummy().then((response: any) =>
-      response.forEach((element: any) => {
-        console.log(Object.values(element));
-      })
-    );
+    this.fetchDummy()
+      .then((response: any) =>
+        response.forEach((element: any) => {
+          console.log(Object.values(element));
+        })
+      )
+      .catch((e) => alert(e));
     // Object.values(obj).forEach((ele) => this.contains(ele, QueryParams));
     // return this.searchPostsArray;
   };
@@ -64,4 +64,3 @@ export class SupabaseService {
   //   // return data;
   // };
 }
-

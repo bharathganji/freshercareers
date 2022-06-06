@@ -19,15 +19,17 @@ export class PostviewComponent implements OnInit {
 
   isLoading = true;
   ngOnInit(): void {
-    // console.log(this.activateRoute.snapshot.paramMap.get('id'));
     this.activateRoute.paramMap.subscribe((param) => {
-      this.supabaseService.fetchByID(param.get('id')).then((post: any) => {
-        this.post = post[0];
-        this.isLoading = false;
-      });
+      this.supabaseService
+        .fetchByID(param.get('id'))
+        .then((post: any) => {
+          this.post = post[0];
+          this.isLoading = false;
+        })
+        .catch((e) => alert(e));
     });
   }
-  applynow(link:any) {
+  applynow(link: any) {
     window.open(link, '_blank');
   }
 }
