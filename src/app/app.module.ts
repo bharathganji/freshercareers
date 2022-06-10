@@ -28,6 +28,7 @@ import { NotFoundComponent } from './client/modules/components/not-found/not-fou
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessPageComponent } from './client/modules/components/success-page/success-page.component';
 import { PostAJobComponent } from './client/modules/components/post-a-job/post-a-job.component';
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,6 @@ import { PostAJobComponent } from './client/modules/components/post-a-job/post-a
     NotFoundComponent,
     SuccessPageComponent,
     PostAJobComponent,
-    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -62,6 +62,10 @@ import { PostAJobComponent } from './client/modules/components/post-a-job/post-a
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7640562161899788',
+      adSlot: 7259870550,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
