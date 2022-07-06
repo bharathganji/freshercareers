@@ -28,7 +28,7 @@
     "@angular/router": "~13.3.11",
     "@nguniversal/express-engine": "^13.1.1",
     "@popperjs/core": "^2.11.5",
-    "@schematics/angular": "^13.3.7",
+    "@schematics/angular": "^13.3.8",
     "@supabase/realtime-js": "^1.7.2",
     "@supabase/supabase-js": "^1.35.3",
     "bootstrap": "^5.1.3",
