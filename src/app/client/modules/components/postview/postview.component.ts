@@ -35,6 +35,8 @@ export class PostviewComponent implements OnInit {
     this.activateRoute.paramMap.subscribe((param: any) => {
       // this.post= param.get('id')
       this.post = JSON.parse(param.get('id'));
+      console.log(this.post);
+      
 
       this.date = this.post.pop().split(' ');
       this.url = this.post.pop();

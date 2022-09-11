@@ -9,12 +9,12 @@
       <div
         *ngFor="
           let item of jobcollection
-            | paginate: { itemsPerPage: 6, currentPage: p };let i = index
+            | paginate: { itemsPerPage: 6, currentPage: p }; 
         "
       >
         <app-cardview
           [jobcollection]="item"
-          (click)="gotoPost('/post/', jobcollection[i])"
+          (click)="gotoPost('/post/', item)"
         ></app-cardview>
       </div>
     </div>
