@@ -1,3 +1,64 @@
+<div *ngIf="isLoading; else postview" style="height: 100%">
+  <app-loading></app-loading>
+</div>
+<ng-template #postview>
+  <div ngClass="container ">
+    <section>
+      <div ngClass="section-title">
+        <h2 ngClass="section-title-name">{{ post.title }}</h2>
+        <h3 ngClass="section-title-postdate">posted on: <b>{{date[0]}}</b></h3>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <!-- <article>
+        <h2>Role & Responsibilities</h2>
+        <ul>
+          <li>..........</li>
+          <li>..........</li>
+          <li>..........</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Required Candidate profile</h2>
+        <ul>
+          <li>..........</li>
+          <li>..........</li>
+          <li>..........</li>
+        </ul>
+      </article> -->
+      <div class="sharethis-sticky-share-buttons"></div>
+      <article>
+        <div *ngFor="let item of post; let i = index">
+        <h2>{{ item }}</h2>
+          
+        </div>
+  
+        <mat-divider></mat-divider>
+        <br />
+        <button (click)="applynow()" ngClass="apply-button">
+          <span class="label">Apply Now</span>
+          <span class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                fill="currentColor"
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+              ></path>
+            </svg>
+          </span>
+        </button>
+      </article>
+    </section>
+  </div>
+</ng-template>
+<br />
+
 <!-- <div
   ngClass=""
   style="background-color: red; padding: 100px; margin: 20px"
@@ -50,6 +111,9 @@
     position: relative;
   "
 ></div> -->
+
+<!-- original 
+
 <div *ngIf="isLoading; else postview" style="height: 100%">
   <app-loading></app-loading>
 </div>
@@ -124,3 +188,4 @@
   </div>
 </ng-template>
 <br />
+ original -->

@@ -5,7 +5,10 @@
   --border-radius: 0.75rem;
   --primary-color: #7257fa;
   --secondary-color: #3c3852;
-  width: 210px;
+  width: 200px;
+  /* height: 100px; */
+  height: calc(100% - 15px);
+  margin-bottom: 15px;
   font-family: "Arial";
   padding: 1rem;
   cursor: pointer;
@@ -69,7 +72,7 @@
 
 .card__img {
   position: absolute;
-  height: 50px;
+  height: 100px;
   width: 50px;
   bottom: 100px;
   left: 150px;

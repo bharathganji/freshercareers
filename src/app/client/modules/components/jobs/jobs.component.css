@@ -3,6 +3,7 @@
   flex-direction: row;
   /* flex-wrap: wrap; */
   flex-shrink: 0;
+  height: 250px;
   gap: 1rem;
   overflow-x: auto;
   padding: 10px 10px;

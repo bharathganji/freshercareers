@@ -14,22 +14,52 @@ export class PostviewComponent implements OnInit {
     private supabaseService: SupabaseService,
     private activateRoute: ActivatedRoute
   ) {}
-  post!: jobData;
+  // post!: jobData;
+  post!: any;
   // id!: string | null;
+
+  url!: any;
+  date!:any;
 
   isLoading = true;
   ngOnInit(): void {
-    this.activateRoute.paramMap.subscribe((param) => {
-      this.supabaseService
-        .fetchByID(param.get('id'))
-        .then((post: any) => {
-          this.post = post[0];
-          this.isLoading = false;
-        })
-        .catch((e) => alert(e));
+    // this.activateRoute.paramMap.subscribe((param) => {
+    //   this.supabaseService
+    //     .fetchByID(param.get('id'))
+    //     .then((post: any) => {
+    //       this.post = post[0];
+    //       this.isLoading = false;
+    //     })
+    //     .catch((e) => alert(e));
+    // });
+    this.activateRoute.paramMap.subscribe((param: any) => {
+      // this.post= param.get('id')
+      this.post = JSON.parse(param.get('id'));
+
+      this.date = this.post.pop().split(' ');
+      this.url = this.post.pop();
+      this.detectURLs(this.url);
+
+      this.isLoading = false;
     });
   }
-  applynow(link: any) {
-    window.open(link, '_blank');
+
+  link!: any;
+  applynow() {
+    window.open(this.link, '_blank');
+  }
+ 
+  // applynow(link: any) {
+  //   window.open(link, '_blank');
+  // }
+
+  detectURLs(message: any) {
+    let urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+    this.link = message.match(urlRegex)[0];
+    let temp = message.replace(this.link, '');
+    this.post.push(temp);
+    // console.log(message.match(urlRegex));
+
+    // this.applynow( message.match(urlRegex));
   }
 }

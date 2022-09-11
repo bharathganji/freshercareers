@@ -7,12 +7,13 @@ import { jobData } from 'src/app/classes/jobData';
   styleUrls: ['./cardview.component.css'],
 })
 export class CardviewComponent implements OnInit {
-  @Input() jobcollection!: jobData;
+  // @Input() jobcollection!: jobData;
+  @Input() jobcollection!: any;
 
   constructor() {}
 
   ngOnInit(): void { 
-    console.log('cardview called');
+    // console.log('cardview called');
     
   }
 }
