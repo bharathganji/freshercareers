@@ -1,0 +1,28 @@
+.job-collection {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    height: 250px;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 10px 10px;
+    flex-wrap: nowrap;
+    align-content: space-around
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    /* /* remove scrollbar space / */
+    background: transparent;
+    /* / optional: just make scrollbar invisible / */
+  }
+  ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.05);
+  }    
+  .pagination-controls {
+    /* float: right; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: 10px;
+  }
+  

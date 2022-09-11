@@ -1,3 +1,28 @@
-<p>search-posts works!</p>
+<div *ngIf="isLoading; else jobs">
+    <app-loading></app-loading>
+  </div>
+  
+  <ng-template #jobs>
+    <section>
+      <h1><b>Browse Latest posted jobs</b></h1>
+      <div ngClass="job-collection">
+        <div
+          *ngFor="
+            let item of jobcollection
+              | paginate: { itemsPerPage: 3, currentPage: p }; 
+          "
+        >
+          <app-cardview
+            [jobcollection]="item"
+            (click)="gotoPost('/post/', item)"
+          ></app-cardview>
+        </div>
+      </div>
 
-{{ QueryArray}}
+      <mat-divider></mat-divider>
+      <pagination-controls
+        (pageChange)="p = $event"
+        ngClass="pagination-controls"
+      ></pagination-controls>
+    </section>
+  </ng-template>
