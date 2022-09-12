@@ -1,4 +1,4 @@
-[
+export const data_job=[
   [
     "Colgate Recruitment | Data Engineer                                                  Job Position: Data Engineer – Associate Analyst / Data Engineer I",
     "Location: Mumbai",
