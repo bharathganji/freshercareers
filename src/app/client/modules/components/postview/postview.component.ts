@@ -26,7 +26,6 @@ export class PostviewComponent implements OnInit {
 
   isLoading = true;
   ngOnInit(): void {
-   
     // this.activateRoute.paramMap.subscribe((param) => {
     //   this.supabaseService
     //     .fetchByID(param.get('id'))
@@ -39,7 +38,7 @@ export class PostviewComponent implements OnInit {
     this.activateRoute.paramMap.subscribe((param: any) => {
       // this.post= param.get('id')
       this.post = JSON.parse(param.get('id'));
-      console.log(this.post);
+      // console.log(this.post);
 
       this.date = this.post.pop().split(' ');
       this.url = this.post.pop();
@@ -47,18 +46,19 @@ export class PostviewComponent implements OnInit {
 
       this.isLoading = false;
 
-
-      this.titleService.setTitle("Example of SEO Meta Tag using Angular");  
-      this.metaTagService.addTags([  
-        { name: 'keywords', content: this.post.toString()  },  
-        { name: 'robots', content:  this.post.toString()},  
-        { name: 'title', content:  this.post.toString() },  
-        { name: 'position', content:  this.post.toString() },  
-        { name: 'location', content:  this.post.toString() },  
-        { charset: 'UTF-8' }  
-      ]);  
+      this.titleService.setTitle(
+        'FresherCareers.online, FresherCareers, Fresher Careers Fresher Jobs, work from home jobs, job vacancies internships in India 2022.'
+      + this.post.toString());
+      this.metaTagService.addTags([
+        { name: 'keywords', content: this.post.toString() },
+        { name: 'robots', content: this.post.toString() },
+        { name: 'title', content: this.post.toString() },
+        { name: 'position', content: this.post.toString() },
+        { name: 'location', content: this.post.toString() },
+        { name: 'description', content: this.post.toString() },
+        { charset: 'UTF-8' },
+      ]);
     });
-   
   }
 
   link!: any;
